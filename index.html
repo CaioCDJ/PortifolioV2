@@ -9,9 +9,46 @@
 </head>
 
 <body class="bg-background">
-
-
-    <main>
+    
+  <header>
+    <nav>
+      <ul class="list-none p-3">
+        <li> <a href="#">Caio Corrêa</a></li>
+        
+        <li class=" float-right">
+          <div class="md:block
+                   hidden gap-4">
+            <a href="#about">Sobre</a>
+            <a href="#stack">Stack</a>
+            <a href="#project">Projetos</a>
+            <a href="#contato">Contato</a>
+          </div>
+        </li>
+        <li class="float-right md:hidden">
+         <button onclick="hide()"> 
+              <i class="fa fa-bars"></i>
+            </button>
+        </li>
+      </ul>
+      <ul id="navMob" class="md:hidden hidden p-2 absolute w-full">
+        <li class="float-right">
+          <div class="grid
+                      grid-row-4
+                      justify-items-right
+                      content-right
+                      place-self-end
+                      text-right
+                      gap-4">
+              <a href="#about">Sobre</a>
+              <a href="#stack">Stack</a>
+              <a href="#project">Projetos</a>
+              <a href="#contato">Contato</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
         <!-- 
             -- > Intro 
         -->
@@ -21,9 +58,10 @@
                     grid-row-4
                     space-y-4
                     justify-items-center
-                    content-center">
+                    content-center"
+              id="intro">
 
-          <div id="profilePic" 
+             <div id="profilePic" 
                class="bg-local
                       h-52 
                       w-52
@@ -46,10 +84,12 @@
             -- >  About / Bios
         -->
     
-        <div class="h-screen
+        <div class="xl:h-screen
+                    h-full
                     flex
                     flex-col
-                    aling-items-center">
+                    aling-items-center"
+              id="about">
             
             <h2 class="text-center">-- Sobre --</h2>
             
@@ -88,11 +128,14 @@
             -- > Stack
         -->
 
-        <div class="md:h-screen
-                    h-auto
+        <div class="lg:h-screen
+                    h-full
+                    lg:mt-0
+                    mt-24
                     text-center 
                     space-y-2
-                    ">
+                    "
+              id="stack">
 
             
             <h2>-- Stack --</h2>
@@ -118,24 +161,34 @@
                         
                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
                                 class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                                       h-24 w-24"
+                                title="c# (csharp)"/>
                         
                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
                                 class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                                       h-24 w-24"
+                                title="Javascript"/>
                         
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
                                 class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                                       h-24 w-24"
+                              title="html5"/>
                         
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                            class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                             class="md:h-32 md:w-32
+                                       h-24 w-24"
+                             title="css3"/>
 
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" 
                             class="md:h-32 md:w-32
-                                       h-24 w-24"/>
-          
+                                       h-24 w-24"
+                             title="typescript"/>
+                       
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" 
+                             class="md:h-36 md:w-32
+                                       h-24 w-24"
+                             title="php"/>
+            
                     </div>
                 </div>
                 
@@ -158,21 +211,23 @@
                             
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
                                 class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                                       h-24 w-24"
+                                title="TailwindCss"/>
                             
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" 
                                     class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                                       h-24 w-24"
+                                  title="bootstrap"/>
                              
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
                                 class="md:h-32 md:w-32
-                                       h-24 w-24"/>
+                                       h-24 w-24"
+                                title="express"/>
                             
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
                                 class="md:h-32 md:w-32
-                                       h-24 w-24"/>
-          
-
+                                       h-24 w-24"
+                                title="React"/>
                         </div>
                     </div>
                     <div id="bibiliotecas" 
@@ -201,17 +256,18 @@
                 </div>
             </div> 
         </div> 
-      
             
        <!--
             -- > Projetos 
         -->
             
         <div class="h-auto
-                    mt-10
+                    mt-36
                     lg:h-screen
                     text-center
-                    p-8">
+                    p-8
+                    "
+              id="project">
                 
                 <h2 class="mt-2"> -- Projetos -- </h2>
                     
@@ -228,6 +284,8 @@
                                 grid grid-row-4
                                 justify-items-center
                                 text-center
+                                h-full
+                                
                                 p-3 
                                 hover:bg-cardHover">
                         <!--WhatsappClone-->
@@ -237,10 +295,11 @@
                             style="background-image:url('https://camo.githubusercontent.com/8de8f60da17f7ad8655fbba2374b7500c2c5fcc32ffe5541321755016b609db5/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f68636f64652d636f6d2d62722e61707073706f742e636f6d2f6f2f77686174736170702e6a70673f616c743d6d6564696126746f6b656e3d35666337386533622d343837312d343234662d616266612d623736356632353135643063')">
                         </div>
                          
-                        <h4>WhatsappClone</h4>
+                        <h4 class="m-8 lg:m-0">WhatsappClone</h4>
                         <p class="text-justify">
-                            </p>
-                         <a class="btn"                              
+                          Clone do whatsapp desenvolvido no express e integrado com o firebase segundo o curso de javascript da Hcode.    
+                        </p>
+                         <a class="btn m-6 lg:m-0"                              
                                       href="https://github.com/CaioCDJ/whatsappCloneClear"><i class="fa fa-code"></i> Source</a>
 
                     </div>
@@ -259,14 +318,14 @@
                             style="background-image:url('https://raw.githubusercontent.com/d3xt3er/FrontEnd-Recyclo/main/View/img/mapa.PNG')">
                         </div>
                          
-                        <h4>Recyclo</h4>
+                        <h4 class="m-8 lg:m-0">Recyclo</h4>
                         <p class="text-justify">
                             Um site voltado principalmente a localização de pontos de coleta de materiais reciclaveis, 
                             e denuncias de discarte ilegal pela cidade.</p>
                         <div class="grid grid-cols-2 gap-4">
-                            <a class="btn"                              
+                            <a class="btn m-6 lg:m-0"                              
                                       href="https://github.com/d3xt3er/FrontEnd-Recyclo"><i class="fa fa-code"></i> Source</a>
-                            <a class="btn" href="https://d3xt3er.github.io/FrontEnd-Recyclo/View">View Live</a>
+                            <a class="btn m-6 lg:m-0" href="https://d3xt3er.github.io/FrontEnd-Recyclo/View">View Live</a>
                         </div>
 
                     </div>
@@ -283,11 +342,11 @@
                             style="background-image:url('https://camo.githubusercontent.com/1994b4521e0baafc06a1b96b4bef280448330e5d062e9f108e35f73bcde148b8/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f68636f64652d636f6d2d62722e61707073706f742e636f6d2f6f2f44726f70426f78436c6f6e652e6a70673f616c743d6d6564696126746f6b656e3d64353963616430632d343430642d343531362d383866322d646139303462396262343433')">
                         </div>
                          
-                        <h4>DropBoxClone</h4>
+                        <h4 class="m-8 lg:m-0">DropBoxClone</h4>
                         <p class="text-justify">
                            Clone do dropbox desenvolvido no express e integrado com o firebase 
                            segundo o curso de javascript da Hcode.</p>
-                            <a class="btn"                              
+                            <a class="btn m-6 lg:m-0"                              
                                       href="https://github.com/CaioCDJ/dropboxClear"><i class="fa fa-code"></i> Source</a>
 
                     </div>
@@ -296,17 +355,72 @@
             </div>
         
             <!--
-                -- > Foorter / cotato
+                -- > contato
             -->       
 
             <div class="h-screen
-                        flex
-                        mt-10
-                        justify-items-center
-                        content-center
-                        text-center
-                        bg-gradient-to-t from-purple to-background">
-                    <h2>Contato</h2>
-            </div>
+                       mt-20
+                       flex 
+                       grid
+                       lg:grid-cols-2
+                       grid-rows-auto
+                       justify-items-center
+                       content-center
+                       bg-gradient-to-t from-purple to-background"
+                  id="contato">
+               
+                   
+  
+              <div class="grid
+                          grid-row-2
+                          justify-items-center
+                          content-center">
+                <img src="app.png" class="h-56 w-56">
+                <div>
+
+                </div>
+              </div>  
+               <div class="grid
+                           grid-rows-auto
+                           text-center
+                           gap-3
+                           justify-items-center
+                           content-center
+                           h-full
+                           w-full
+                           mt-10
+                           lg:mt-0">
+  
+                 <h2>-- Contato --</h2>
+                <div class="text-left  p-4 grid grid-rows-auto gap-5 mt-8">
+              
+                  <a title="E-mail" href=""><i class="fa fa-envelope"></i> caiodjesus1@hotmail.com</a>
+                  <a title="Github" href="https://github.com/caiocdj"><i class="fa fa-github"></i> caioCDJ</a>
+                  <a title="Linkedin" href="https://www.linkedin.com/in/caio-corr%C3%AAa-4aa4731b2"><i class="fa fa-linkedin"></i> Linkedin</a>
+                
+               </div>
+             </div>
+        </div>
     </main>
+      <!--
+        -- > footer
+      -->
+    <footer  class="text-center bg-purple">
+          <span>
+            Desenvolvido com <i class="fa fa-heart text-rose-600"></i>
+            <strong>por mim</strong>
+          </span>
+    </footer> 
+  <script>
+      // funcao da navabar  
+    function hide(){
+      let nav = document.getElementById("navMob");
+      if(nav.classList.contains("hidden") ){
+        nav.classList.remove("hidden");
+        
+      } else{
+        nav.classList.add("hidden");
+      }
+    }
+  </script>
 </body>

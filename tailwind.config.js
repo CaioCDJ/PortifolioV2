@@ -6,6 +6,7 @@ module.exports = {
             card:"#181b28",
             cardHover: "#13151f",
             subTitles:"#c50ed2",
+            middle:"#42168a",
             purple: "#781eff" 
         }, 
         extend: {},
