@@ -22,9 +22,11 @@ li a:hover{
   color:#dc2cff
 }
 #profilePic{
-      border-radius: 100%; /*1*/
-  border: 4px solid transparent; /*2*/
-  background: linear-gradient(45deg,#4C06F0,#4D08EF) border-box;
+    border-radius: 100%; /*1*/
+    border: 4px solid transparent; /*2*/
+    background: linear-gradient(45deg,#4C06F0,#4D08EF) border-box;
+    animation-name: intro;
+    animation-duration: 3s;
 }
 
 #profilePic img{
@@ -37,6 +39,11 @@ h4{
   font-style:italic;
   font-weight:800;
   letter-spacing:1px
+}
+.animation{
+    visibility: visible;
+    animation-name:show;
+    animation-duration: 5s;
 }
 #linguagens{
    background-color: #6E16D2; 
@@ -54,4 +61,21 @@ h4{
 }
 .btn:hover{
     color:  #8849e6;
+}
+
+
+
+/*-- Animations --*/
+
+@keyframes intro{
+
+    from {opacity: 0; margin-top:100px}
+  
+    to {opacity: 1; margin-top:0;}
+}
+
+@keyframes show{
+    from {opacity: 0; margin-top: 10px;}
+  
+    to {opacity: 1; margin-top: auto;}
 }

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.6 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -870,6 +870,10 @@ li a:hover{
   border: 4px solid transparent;
   /*2*/
   background: linear-gradient(45deg,#4C06F0,#4D08EF) border-box;
+  -webkit-animation-name: intro;
+          animation-name: intro;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 #profilePic img{
@@ -881,6 +885,14 @@ h4{
   font-style:italic;
   font-weight:800;
   letter-spacing:1px
+}
+
+.animation{
+  visibility: visible;
+  -webkit-animation-name:show;
+          animation-name:show;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 #linguagens{
@@ -903,6 +915,56 @@ h4{
 
 .btn:hover{
   color:  #8849e6;
+}
+
+/*-- Animations --*/
+
+@-webkit-keyframes intro{
+  from {
+    opacity: 0;
+    margin-top:100px
+  }
+
+  to {
+    opacity: 1;
+    margin-top:0;
+  }
+}
+
+@keyframes intro{
+  from {
+    opacity: 0;
+    margin-top:100px
+  }
+
+  to {
+    opacity: 1;
+    margin-top:0;
+  }
+}
+
+@-webkit-keyframes show{
+  from {
+    opacity: 0;
+    margin-top: 10px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: auto;
+  }
+}
+
+@keyframes show{
+  from {
+    opacity: 0;
+    margin-top: 10px;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: auto;
+  }
 }
 
 .hover\:bg-cardHover:hover {

@@ -73,11 +73,11 @@
                            class="h-full w-full rounded-full">
           </div> 
 
-            <h1 class="text-3xl font-black">Caio Corrêa de Jesus</h1>
+            <h1 class="text-3xl font-black introAnimate">Caio Corrêa de Jesus</h1>
             
-            <hr class="w-1/2 t-white-900">
+            <hr class="w-1/2 t-white-900 introAnimate ">
             
-            <h2 class="text-xl tracking-wide">Desenvolvedor FullStack</h2>
+            <h2 class="text-xl tracking-wide introAnimate">Desenvolvedor FullStack</h2>
         </div>
        
         <!--
@@ -88,7 +88,8 @@
                     h-full
                     flex
                     flex-col
-                    aling-items-center"
+                    aling-items-center
+                    animate"
               id="about">
             
             <h2 class="text-center">-- Sobre --</h2>
@@ -134,7 +135,7 @@
                     mt-24
                     text-center 
                     space-y-2
-                    "
+                    animate"
               id="stack">
 
             
@@ -266,7 +267,7 @@
                     lg:h-screen
                     text-center
                     p-8
-                    "
+                    animate"
               id="project">
                 
                 <h2 class="mt-2"> -- Projetos -- </h2>
@@ -418,16 +419,5 @@
       </span>
     </footer>
   
-  <script>
-      // funcao da navabar  
-    function hide(){
-      let nav = document.getElementById("navMob");
-      if(nav.classList.contains("hidden") ){
-        nav.classList.remove("hidden");
-        
-      } else{
-        nav.classList.add("hidden");
-      }
-    }
-  </script>
+  <script src="./script.js"></script>
 </body>
